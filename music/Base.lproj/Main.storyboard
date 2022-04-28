@@ -17,11 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG0-Hp-tuk">
-                                <rect key="frame" x="102" y="174" width="211" height="203"/>
+                                <rect key="frame" x="103" y="171" width="211" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="button_play"/>
                                 <state key="selected" image="button_pause"/>
+                                <connections>
+                                    <action selector="touchUpPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0M-g0-2sL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-ac-rIG">
                                 <rect key="frame" x="168" y="435" width="79" height="36"/>
@@ -31,14 +34,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yxT-eS-mLO">
-                                <rect key="frame" x="56" y="506" width="304" height="30"/>
+                                <rect key="frame" x="56" y="528" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="sliderValueChaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vec-bt-eAQ"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="dG0-Hp-tuk" id="GJH-3H-fuC"/>
+                        <outlet property="progressSlider" destination="yxT-eS-mLO" id="pKY-KB-ab3"/>
+                        <outlet property="timeLabel" destination="zvI-ac-rIG" id="iWH-GH-spQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
