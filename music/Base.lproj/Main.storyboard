@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button" image="button_play"/>
                                 <state key="selected" image="button_pause"/>
                                 <connections>
-                                    <action selector="touchUpPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0M-g0-2sL"/>
+                                    <action selector="touchUpPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xro-9a-zzN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-ac-rIG">
